@@ -40,10 +40,10 @@ function WeatherApp () {
             const KelvinTemp = data.main.temp;
             const temperature = (KelvinTemp - 273.15).toFixed(1);
             const humidity = data.main.humidity;
-            const wind = data.wind.speed;
+            const windSpeed = data.wind.speed;
             const type = data.weather[0].main.toLowerCase();
             const icon = images[type];
-            setWeatherData({name, temperature, humidity, wind, icon})
+            setWeatherData({name, temperature, humidity, windSpeed, icon})
         } 
         catch (error) {
             console.error(error)
@@ -52,6 +52,7 @@ function WeatherApp () {
 
     useEffect(()=> {
        fetchData('London')  
+       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
     return (
@@ -78,7 +79,7 @@ function WeatherApp () {
                 <div className="element">
                     <img src={wind} alt=""/>
                     <div className="data">
-                        <div className="wind-speed">{weatherData.wind}km/h</div>
+                        <div className="wind-speed">{weatherData.windSpeed}km/h</div>
                         <div className="text">Wind Speed</div>
                       </div>      
                 </div>
