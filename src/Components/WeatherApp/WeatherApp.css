@@ -1,0 +1,88 @@
+.app-container {
+    height: 80%;
+    width: 350px;
+    background-image: linear-gradient(rgb(210, 155, 210), rgb(179, 117, 179), rgb(155, 98, 155)); 
+    border-radius: 12px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 12%;
+    margin-top: 30px
+}
+
+.top-bar input {
+    height: 60%;
+    width: 250px;
+    border-radius: 25px;
+    border: none;
+    padding: 15px;
+    background-color: white;
+    
+}
+
+.search-icon {
+    background-color: white;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    cursor: pointer;
+
+}
+
+.search-icon img {
+    height: 40%;
+}
+
+.weather-image {
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+}
+
+.weather-image img {
+    height: 150px;
+}
+
+.weather-temp,
+.weather-location {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 60px;
+}
+
+.weather-location {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.data-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.element {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.element img {
+    width: 30px;
+    
+}
+
+.data {
+    text-align: center;
+    color: white;
+}
+
