@@ -14,7 +14,7 @@ import wind from '../Assets/wind.png'
 
 function WeatherApp () {
 
-    let api_key = "6858f7481cea9cb16dc31fe09ba88792";
+    let api_key = process.env.REACT_APP_API_KEY;
 
     const [city, setCity] = useState('');
     const [weatherData, setWeatherData] = useState({})
@@ -35,6 +35,7 @@ function WeatherApp () {
                 throw new Error ('Unable to fetch data')
             }
             const data = await response.json();
+            console.log(data)
             const name = data.name;
             const KelvinTemp = data.main.temp;
             const temperature = (KelvinTemp - 273.15).toFixed(1);
